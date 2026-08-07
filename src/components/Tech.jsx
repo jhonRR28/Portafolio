@@ -1,6 +1,63 @@
-import { BiLogoDjango, BiLogoDocker, BiLogoGithub, BiLogoJava, BiLogoJavascript, BiLogoNodejs, BiLogoPhp, BiLogoPostgresql, BiLogoPython, BiLogoTailwindCss, BiLogoTypescript } from "react-icons/bi"
+import {
+  FaReact,
+  FaJava,
+  FaPython,
+  FaPhp,
+  FaHtml5,
+  FaCss3Alt,
+  FaGitAlt,
+} from "react-icons/fa";
+
+import {
+  SiJavascript,
+  SiTailwindcss,
+  SiMysql,
+  SiPostgresql,
+  SiSqlite,
+  SiCisco,
+  SiDjango,
+} from "react-icons/si";
 import { motion } from "motion/react"
-import { SiMysql } from "react-icons/si"
+
+const techCategories = [
+  {
+    title: "Frontend",
+    technologies: [
+      { name: "React", icon: FaReact, color: "text-sky-400" },
+      { name: "JavaScript", icon: SiJavascript, color: "text-yellow-400" },
+      { name: "HTML5", icon: FaHtml5, color: "text-orange-500" },
+      { name: "CSS3", icon: FaCss3Alt, color: "text-blue-500" },
+      { name: "Tailwind CSS", icon: SiTailwindcss, color: "text-cyan-400" },
+    ],
+  },
+
+  {
+    title: "Backend",
+    technologies: [
+      { name: "Python", icon: FaPython, color: "text-blue-400" },
+      { name: "Django", icon: SiDjango, color: "text-green-500" },
+      { name: "PHP", icon: FaPhp, color: "text-indigo-400" },
+      { name: "Java", icon: FaJava, color: "text-orange-500" },
+    ],
+  },
+
+  {
+    title: "Bases de Datos",
+    technologies: [
+      { name: "MySQL", icon: SiMysql, color: "text-sky-500" },
+      { name: "PostgreSQL", icon: SiPostgresql, color: "text-blue-500" },
+      { name: "SQLite", icon: SiSqlite, color: "text-gray-300" },
+    ],
+  },
+
+  {
+    title: "Infraestructura y Redes",
+    technologies: [
+      { name: "Cisco", icon: SiCisco, color: "text-sky-500" },
+      { name: "Git", icon: FaGitAlt, color: "text-orange-500" },
+    ],
+  },
+];
 
 const Tech = () => {
   const variantes = {
@@ -18,7 +75,7 @@ const Tech = () => {
 
       className="text-4xl font-light text-white md:text-6xl">Tecnologías</motion.h1>
 
-      <div className="flex flex-wrap items-center justify-center gap-10 p-5">
+      {/* <div className="flex flex-wrap items-center justify-center gap-10 p-5">
         <motion.div
           variants={variantes}
           initial="hidden"
@@ -83,8 +140,33 @@ const Tech = () => {
         >
           <BiLogoGithub className="cursor-pointer text-[80px] text-blue-600 transition-all duration-300 hover:-translate-y-5 sm:text-[100px] md:text-[120px]"/>
         </motion.div>
-      </div>
+      </div> */}
       
+      <div className="flex w-full flex-col items-center justify-center  p-5 md:p-14">
+        {techCategories.map((category) => (
+          <div key={category.title} className="mb-14">
+            <h2 className="mb-8 text-center text-2xl font-semibold bg-linear-to-r from-sky-300 via-cyan-400 to-blue-800 bg-clip-text text-transparent">
+              {category.title}
+            </h2>
+            <div className="flex flex-wrap justify-center gap-10">
+              {category.technologies.map((tech) => {
+                const Icon = tech.icon;
+                return (
+                  <div
+                    key={tech.name} className="group w-40 flex flex-col items-center justify-center gap-4 rounded-2xl border border-slate-700/50 bg-slate-900/40 p-6 duration-300 hover:-translate-y-2 hover:border-sky-400/50 hover:shadow-lg hover:shadow-sky-500/20">
+                    <Icon
+                      className={`${tech.color} text-5xl transition-transform duration-300 group-hover:scale-110`}
+                    />
+                    <span className="text-center text-white">
+                      {tech.name}
+                    </span>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   )
 }
