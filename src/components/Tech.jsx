@@ -66,86 +66,26 @@ const Tech = () => {
   }
   
   return (
-    <div id="tech" className="flex min-h-[70vh] w-full flex-col items-center justify-center gap-16 md:gap-32">
+    <div id="tech" className="flex min-h-[70vh] w-full flex-col items-center justify-center gap-10 md:gap-18">
       <motion.h1 
       variants={variantes}
       initial="hidden"
       whileInView="visible"
       transition={{ duration: 0.5 }}
 
-      className="text-4xl font-light text-white md:text-6xl">Tecnologías</motion.h1>
-
-      {/* <div className="flex flex-wrap items-center justify-center gap-10 p-5">
-        <motion.div
-          variants={variantes}
-          initial="hidden"
-          whileInView="visible"
-          transition={{ duration: 0.5 }}
-        >
-          <BiLogoPython className="cursor-pointer text-[80px] text-sky-500 transition-all duration-300 hover:-translate-y-5 sm:text-[100px] md:text-[120px]"/>
-        </motion.div>
-        <motion.div
-          variants={variantes}
-          initial="hidden"
-          whileInView="visible"
-          transition={{ duration: 0.5 }}
-        >
-          <BiLogoDjango className="cursor-pointer text-[80px] text-green-500 transition-all duration-300 hover:-translate-y-5 sm:text-[100px] md:text-[120px]"/>
-        </motion.div>
-        <motion.div
-          variants={variantes}
-          initial="hidden"
-          whileInView="visible"
-          transition={{ duration: 0.5 }}
-        >
-          <BiLogoPhp className="cursor-pointer text-[80px] text-indigo-500 transition-all duration-300 hover:-translate-y-5 sm:text-[100px] md:text-[120px]"/>
-        </motion.div>
-        <motion.div
-          variants={variantes}
-          initial="hidden"
-          whileInView="visible"
-          transition={{ duration: 0.5 }}
-        >
-          <BiLogoJava className="cursor-pointer text-[80px] text-amber-500 transition-all duration-300 hover:-translate-y-5 sm:text-[100px] md:text-[120px]"/>
-        </motion.div>
-        <motion.div
-          variants={variantes}
-          initial="hidden"
-          whileInView="visible"
-          transition={{ duration: 0.5 }}
-        >
-          <BiLogoTailwindCss className="cursor-pointer text-[80px] text-sky-400 transition-all duration-300 hover:-translate-y-5 sm:text-[100px] md:text-[120px]"/>
-        </motion.div>
-        <motion.div
-          variants={variantes}
-          initial="hidden"
-          whileInView="visible"
-          transition={{ duration: 0.5 }}
-        >
-          <BiLogoPostgresql className="cursor-pointer text-[80px] text-blue-500 transition-all duration-300 hover:-translate-y-5 sm:text-[100px] md:text-[120px]"/>
-        </motion.div>
-        <motion.div
-          variants={variantes}
-          initial="hidden"
-          whileInView="visible"
-          transition={{ duration: 0.5 }}
-        >
-          <SiMysql className="cursor-pointer text-[80px] text-cyan-800 transition-all duration-300 hover:-translate-y-5 sm:text-[100px] md:text-[120px]"/>
-        </motion.div>
-        <motion.div
-          variants={variantes}
-          initial="hidden"
-          whileInView="visible"
-          transition={{ duration: 0.5 }}
-        >
-          <BiLogoGithub className="cursor-pointer text-[80px] text-blue-600 transition-all duration-300 hover:-translate-y-5 sm:text-[100px] md:text-[120px]"/>
-        </motion.div>
-      </div> */}
+      className="text-4xl font-light text-white md:text-6xl">
+        Tecnologías
+      </motion.h1>
       
       <div className="flex w-full flex-col items-center justify-center  p-5 md:p-14">
         {techCategories.map((category) => (
-          <div key={category.title} className="mb-14">
-            <h2 className="mb-8 text-center text-2xl font-light bg-linear-to-r from-sky-300 via-cyan-400 to-blue-800 bg-clip-text text-transparent md:font-semibold">
+          <motion.div 
+          variants={variantes}
+          initial="hidden"
+          whileInView="visible"
+          transition={{ duration: 0.5 }}
+          key={category.title} className="mb-10 md:mb-14">
+            <h2 className="mb-4 text-center text-2xl font-light bg-linear-to-r from-sky-300 via-cyan-400 to-blue-800 bg-clip-text text-transparent md:font-semibold">
               {category.title}
             </h2>
             <div className="flex flex-wrap justify-center gap-4 md:gap-10">
@@ -164,7 +104,7 @@ const Tech = () => {
                 );
               })}
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
