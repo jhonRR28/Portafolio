@@ -4,25 +4,53 @@ import { motion } from "motion/react"
 const Hero = () => {
   return (
     <div id="home" className="px-16 flex min-h-screen w-full items-center justify-center py-28 md:px-32">
-      <div className="flex flex-col items-center justify-center gap-10 text-white">
+      <div className="flex flex-col items-center justify-center gap-6 text-white">
         <motion.div
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <img src={image} alt="" className="w-75 aspect-square object-cover rounded-full cursor-pointer shadow-xl shadow-indigo-900 transition-all duration-300 hover:translate-y-5 hover:scale-105 hover:shadow-2xl hover:shadow-indigo-600 md:w-87.5" />
+          <img src={image} alt="Jhon Roque" className="w-75 aspect-square borderborder-sky-400/30 object-cover rounded-full cursor-pointer shadow-xl shadow-blue-600/40 transition-all duration-300 hover:translate-y-5 hover:scale-105 hover:shadow-2xl hover:shadow-sky-300/50 md:w-87.5"/>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="flex max-w-150 flex-col items-center justify-center gap-3 text-center"
+        >
+          <h1 className="bg-linear-to-r from-sky-300 via-cyan-400 to-blue-500 bg-clip-text text-transparent text-5xl font-light  md:text-7xl">
+            Jhon Roque
+          </h1>
+          <h3 className="bg-linear-to-r from-sky-400 to-blue-500 bg-clip-text text-transparent text-2xl md:text-3xl">
+            Ingeniero de Sistemas
+          </h3>
+          <p className="text-lg font-light text-sky-500 text-shadow text-shadow-sky-300">
+            Backend • Desarrollo Web • Redes
+          </p>
+          <p className="leading-6 text-pretty text-sm text-gray-400 md:text-base">
+            Soy Ingeniero de Sistemas con interés en el desarrollo backend, aplicaciones web y redes. Disfruto construir soluciones que resuelvan problemas reales, aprender nuevas tecnologías y mejorar continuamente mis habilidades.
+          </p>
         </motion.div>
 
         <motion.div 
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="flex max-w-150 flex-col items-center justify-center gap-3 text-center">
-          <h1 className="bg-linear-to-r from-blue-500 to-pink-500 bg-clip-text text-transparent  text-5xl font-light md:text-7xl">Jhon Roque</h1>
-          <h3 className="bg-linear-to-r from-pink-500 to-blue-500 bg-clip-text text-transparent  text-2xl md:text-3xl">Ingeniero de sistemas</h3>
-          <p className="md:text-base text-pretty text-sm text-gray-400">
-            Soy Ingeniero de Sistemas con interés en el desarrollo backend y la construcción de soluciones que resuelvan problemas reales. He participado en proyectos de software y soporte de infraestructura, y disfruto aprender nuevas tecnologías y mejorar continuamente mis habilidades.
-          </p>
+        className="mt-2 flex flex-wrap items-center justify-center gap-4">
+          <a
+            href="/cv/Jhon_Roque_CV.pdf"
+            target="_blank"
+            className="rounded-xl border border-sky-500 px-6 py-3 font-medium text-sky-400 transition-all duration-300  hover:text-white hover:scale-105 hover:shadow-lg hover:shadow-sky-500/30"
+          >
+            Descargar CV
+          </a>
+          <a
+            href="#projects"
+            className="rounded-xl border border-sky-500 px-6 py-3 font-medium text-sky-400 transition-all duration-300  hover:text-white hover:scale-105 hover:shadow-lg hover:shadow-sky-500/30"
+          >
+            Ver proyectos
+          </a>
         </motion.div>
       </div>
     </div>

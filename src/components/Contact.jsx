@@ -50,7 +50,13 @@ const Contact = () => {
           </li>
         </ul>
 
-        <a href="mailto:maleshector68@gmail.com" className="flex items-center gap-2 text-nowrap rounded-lg border border-indigo-600 bg-black px-5 py-3 text-lg font-bold text-white shadow-lg shadow-indigo-700 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-indigo-600"> <BiMailSend /> Enviar Correo</a>
+        <a
+          href="mailto:maleshector68@gmail.com"
+          className="flex items-center gap-2 rounded-xl border border-sky-500 px-6 py-3 font-medium text-sky-400 transition-all duration-300  hover:text-white hover:scale-105 hover:shadow-lg hover:shadow-sky-500/30"
+        >
+          <BiMailSend className="text-xl" />
+          Enviar correo
+        </a>
       </div>
     </div>
   )

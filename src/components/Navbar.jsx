@@ -14,7 +14,7 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 z-10 flex w-full items-center justify-between border-b border-b-gray-700 bg-black/70 px-16 py-6 text-white backdrop-blur-md md:justify-evenly">
-      <a href="#home" className="bg-linear-to-r from-blue-500 to-pink-500 bg-clip-text text-transparent opacity-80 text-3xl font-semibold transition-all duration-300 hover:opacity-100">
+      <a href="#home"className="bg-linear-to-r from-sky-300 via-cyan-400 to-blue-500 bg-clip-text text-transparent text-4xl font-semibold opacity-90 transition-all duration-300 hover:brightness-110">
         Jhon
       </a>
       <ul className="hidden md:flex gap-10">
@@ -33,7 +33,7 @@ const Navbar = () => {
       </ul>
 
       <ul className="hidden md:flex gap-5">
-        <li className="cursor-pointer text-lg opacity-70 transition-all duration-300 hover:text-blue-500 hover:opacity-100">
+        <li className="cursor-pointer text-2xl opacity-70 transition-all duration-300 hover:text-blue-500 hover:opacity-100">
           <a
             href="https://www.linkedin.com/in/jhon-roque-53512b378"
             target="_blank"
@@ -43,7 +43,7 @@ const Navbar = () => {
           </a>
         </li>
 
-        <li className="cursor-pointer text-lg opacity-70 transition-all duration-300 hover:text-orange-500 hover:opacity-100">
+        <li className="cursor-pointer text-2xl opacity-70 transition-all duration-300 hover:text-orange-500 hover:opacity-100">
           <a
             href="https://github.com/jhonRR28"
             target="_blank"
@@ -53,7 +53,7 @@ const Navbar = () => {
           </a>
         </li>
 
-        <li className="cursor-pointer text-lg opacity-70 transition-all duration-300 hover:text-sky-500 hover:opacity-100">
+        <li className="cursor-pointer text-2xl opacity-70 transition-all duration-300 hover:text-sky-500 hover:opacity-100">
           <a
             href="mailto:maleshector68@gmail.com"
           >
