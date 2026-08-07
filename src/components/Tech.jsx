@@ -153,7 +153,7 @@ const Tech = () => {
                 const Icon = tech.icon;
                 return (
                   <div
-                    key={tech.name} className="group w-40 flex flex-col items-center justify-center gap-4 rounded-2xl border border-slate-700/50 bg-slate-900/40 p-6 duration-300 hover:-translate-y-2 hover:border-sky-400/50 hover:shadow-lg hover:shadow-sky-500/20">
+                    key={tech.name} className="group w-38 flex flex-col items-center justify-center gap-4 rounded-2xl border border-slate-700/50 bg-slate-900/40 px-4 py-6 duration-300 hover:-translate-y-2 hover:border-sky-400/50 hover:shadow-lg hover:shadow-sky-500/20">
                     <Icon
                       className={`${tech.color} text-5xl transition-transform duration-300 group-hover:scale-110`}
                     />
