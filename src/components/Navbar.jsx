@@ -1,7 +1,8 @@
 import { div } from 'motion/react-client';
-import { BiMenu, BiX } from 'react-icons/bi';
+import { BiMailSend, BiMenu, BiX } from 'react-icons/bi';
 import { BsYoutube, BsTwitter, BsLinkedin, BsGithub } from 'react-icons/bs';
 import { useState } from "react";
+import { IoIosMail, IoMdMail, IoMdMailUnread } from 'react-icons/io';
 
 const Navbar = () => {
 
@@ -18,31 +19,46 @@ const Navbar = () => {
       </a>
       <ul className="hidden md:flex gap-10">
         <a href="#home" className="cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100">
-          <li>Home</li>
+          <li>Inicio</li>
         </a>
         <a href="#tech" className="cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100">
-          <li>Tech</li>
+          <li>Tecnologías</li>
         </a>
         <a href="#projects" className="cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100">
-          <li>Projects</li>
+          <li>Proyectos</li>
         </a>
         <a href="#contact" className="cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100">
-          <li>Contact</li>
+          <li>Contacto</li>
         </a>
       </ul>
 
       <ul className="hidden md:flex gap-5">
-        <li className="cursor-pointer text-lg opacity-70 transition-all duration-300 hover:text-red-500 hover:opacity-100">
-          <BsYoutube />
-        </li>
         <li className="cursor-pointer text-lg opacity-70 transition-all duration-300 hover:text-blue-500 hover:opacity-100">
-          <BsLinkedin />
+          <a
+            href="https://www.linkedin.com/in/jhon-roque-53512b378"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <BsLinkedin />
+          </a>
         </li>
-        <li className="cursor-pointer text-lg opacity-70 transition-all duration-300 hover:text-sky-500 hover:opacity-100">
-          <BsTwitter />
-        </li>
+
         <li className="cursor-pointer text-lg opacity-70 transition-all duration-300 hover:text-orange-500 hover:opacity-100">
-          <BsGithub />
+          <a
+            href="https://github.com/jhonRR28"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <BsGithub />
+          </a>
+        </li>
+
+        <li className="cursor-pointer text-lg opacity-70 transition-all duration-300 hover:text-sky-500 hover:opacity-100">
+          <a
+            href="mailto:maleshector68@gmail.com"
+          >
+            <IoMdMail />
+          </a>
         </li>
       </ul>
 
@@ -56,31 +72,46 @@ const Navbar = () => {
         <div className={`fixed right-0 top-21 flex h-screen w-1/2 flex-col items-center justify-start gap-10 border-l border-gray-800 bg-black/90 p-12 ${isOpen ? "block" : "hidden"}`}>
           <ul className="flex flex-col gap-8 ">
             <a href="#home" className="cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100">
-              <li>Home</li>
+              <li>Inicio</li>
             </a>
             <a href="#tech" className="cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100">
-              <li>Tech</li>
+              <li>Tecnologías</li>
             </a>
             <a href="#projects" className="cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100">
-              <li>Projects</li>
+              <li>Proyectos</li>
             </a>
             <a href="#contact" className="cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100">
-              <li>Contact</li>
+              <li>Contacto</li>
             </a>
           </ul>
 
           <ul className="flex flex-wrap gap-5">
-            <li className="cursor-pointer text-lg opacity-70 transition-all duration-300 hover:text-red-500 hover:opacity-100">
-              <BsYoutube />
-            </li>
             <li className="cursor-pointer text-lg opacity-70 transition-all duration-300 hover:text-blue-500 hover:opacity-100">
-              <BsLinkedin />
+              <a
+                href="https://www.linkedin.com/in/jhon-roque-53512b378"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <BsLinkedin />
+              </a>
             </li>
-            <li className="cursor-pointer text-lg opacity-70 transition-all duration-300 hover:text-sky-500 hover:opacity-100">
-              <BsTwitter />
-            </li>
+
             <li className="cursor-pointer text-lg opacity-70 transition-all duration-300 hover:text-orange-500 hover:opacity-100">
-              <BsGithub />
+              <a
+                href="https://github.com/jhonRR28"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <BsGithub />
+              </a>
+            </li>
+
+            <li className="cursor-pointer text-lg opacity-70 transition-all duration-300 hover:text-sky-500 hover:opacity-100">
+              <a
+                href="mailto:maleshector68@gmail.com"
+              >
+                <IoMdMail />
+              </a>
             </li>
           </ul>
         </div>

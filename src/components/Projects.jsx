@@ -1,7 +1,7 @@
 import { div } from 'motion/react-client'
-import image1 from '/public/image1.jpg'
-import image2 from '/public/image2.jpg'
-import image3 from '/public/image3.jpg'
+import image1 from '/public/facturacion.jpeg'
+import image2 from '/public/cuidarnos.png'
+import image3 from '/public/finu.png'
 import image4 from '/public/image4.jpg'
 import image5 from '/public/image5.jpg'
 import { motion } from "motion/react"
@@ -9,23 +9,23 @@ import { motion } from "motion/react"
 const projectsData = [
   {
     image: image1,
-    title: "Project 1",
-    description: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    technologies: ["React", "Tailwind CSS", "Node.js"],
+    title: "Sistema Integral de Gestión de Clientes y Facturación",
+    description: "Sistema web desarrollado para optimizar la gestión de clientes, consumos y facturación de un acueducto comunitario. Participé en el desarrollo de funcionalidades, mantenimiento y mejoras del sistema, contribuyendo a automatizar procesos administrativos.",
+    technologies: ["PHP", "MySQL", "JavaScript", "HTML", "CSS"],
     link: "https://example.com/project1"
   },
   {
     image: image2,
-    title: "Project 2",
-    description: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    technologies: ["React", "Tailwind CSS", "Node.js"],
+    title: "Aplicación para la Coordinación del Cuidado de Pacientes",
+    description: "Proyecto personal orientado a mejorar la organización del cuidado de pacientes mediante la centralización de información médica, medicamentos y responsabilidades familiares. Actualmente se encuentra en desarrollo.",
+    technologies: ["Flutter", "Django", "PostgresSQL"],
     link: "https://example.com/project2"
   },
   {
     image: image3,
-    title: "Project 3",
-    description: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    technologies: ["React", "Tailwind CSS", "Node.js"],
+    title: "FinU",
+    description: "Aplicación enfocada en la gestión de gastos personales, diseñada para facilitar el registro y seguimiento de ingresos y egresos mediante una interfaz sencilla e intuitiva.",
+    technologies: ["Flutter", "SQLite"],
     link: "https://example.com/project3"
   },
   {
@@ -88,7 +88,7 @@ const Projects = () => {
     <div id="projects" className='flex min-h-screen w-full flex-col items-center justify-center gap-16 p-4 md:px-14 md:py-24:'>
 
       <ScrollReveal>
-      <h1 className='text-4xl font-light text-white md:text-6xl'>My Projects</h1>
+      <h1 className='text-4xl font-light text-white md:text-6xl'>Mis Proyectos</h1>
       </ScrollReveal>
 
       <div className="flex w-full max-w-250 flex-col gap-16 text-white">
