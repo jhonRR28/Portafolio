@@ -1,10 +1,11 @@
 import { div } from 'motion/react-client'
-import image1 from '/public/facturacion.jpeg'
+import image1 from '/public/facturacion.png'
 import image2 from '/public/cuidarnos.png'
 import image3 from '/public/finu.png'
 import image4 from '/public/image4.jpg'
 import image5 from '/public/image5.jpg'
 import { motion } from "motion/react"
+import { BsGithub } from 'react-icons/bs'
 
 const projectsData = [
   {
@@ -12,36 +13,36 @@ const projectsData = [
     title: "Sistema Integral de Gestión de Clientes y Facturación",
     description: "Sistema web desarrollado para optimizar la gestión de clientes, consumos y facturación de un acueducto comunitario. Participé en el desarrollo de funcionalidades, mantenimiento y mejoras del sistema, contribuyendo a automatizar procesos administrativos.",
     technologies: ["PHP", "MySQL", "JavaScript", "HTML", "CSS"],
-    link: "https://example.com/project1"
+    repository: "https://github.com/gabrieljimenezc01/Facturacion_Aranda/tree/jhon"
   },
   {
     image: image2,
     title: "Aplicación para la Coordinación del Cuidado de Pacientes",
     description: "Proyecto personal orientado a mejorar la organización del cuidado de pacientes mediante la centralización de información médica, medicamentos y responsabilidades familiares. Actualmente se encuentra en desarrollo.",
     technologies: ["Flutter", "Django", "PostgresSQL"],
-    link: "https://example.com/project2"
+    repository: "#home"
   },
   {
     image: image3,
     title: "FinU",
     description: "Aplicación enfocada en la gestión de gastos personales, diseñada para facilitar el registro y seguimiento de ingresos y egresos mediante una interfaz sencilla e intuitiva.",
     technologies: ["Flutter", "SQLite"],
-    link: "https://example.com/project3"
+    repository: "https://github.com/gabrieljimenezc01/FinU"
   },
-  {
-    image: image4,
-    title: "Project 4",
-    description: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    technologies: ["React", "Tailwind CSS", "Node.js"],
-    link: "https://example.com/project4"
-  },
-  {
-    image: image5,
-    title: "Project 5",
-    description: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    technologies: ["React", "Tailwind CSS", "Node.js"],
-    link: "https://example.com/project5"
-  }
+  // {
+  //   image: image4,
+  //   title: "Project 4",
+  //   description: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  //   technologies: ["React", "Tailwind CSS", "Node.js"],
+  //   repository: "https://example.com/project4"
+  // },
+  // {
+  //   image: image5,
+  //   title: "Project 5",
+  //   description: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  //   technologies: ["React", "Tailwind CSS", "Node.js"],
+  //   repository: "https://example.com/project5"
+  // }
 ]
 
 const ScrollReveal = ({ children }) => {
@@ -68,14 +69,18 @@ const ProjectCard = ({project}) => {
           <p className='text-gray-400'>{project.description}</p>
         </div>
 
-        <div className="flex flex-wrap gap-5">
-          {
-            project.technologies.map((tech, index) => (
-              <span key={index} className="rounded-lg bg-black p-3">
+        <div className="flex flex-wrap items-end justify-between gap-4">
+          <div className="flex flex-wrap gap-3">
+            {project.technologies.map((tech, index) => (
+              <span key={index} className="rounded-lg border border-sky-400/20 bg-sky-400/5 px-3 py-1.5 text-sm text-sky-300 transition-all duration-300 hover:border-sky-400/50 hover:bg-sky-400/10">
                 {tech}
               </span>
-            ))
-          }
+            ))}
+          </div>
+          <a href={project.repository} target="_blank" rel="noopener noreferrer" className="flex shrink-0 items-center gap-2 rounded-lg border border-sky-400/30 px-4 py-2 text-sm font-medium text-sky-300 transition-all duration-300 hover:-translate-y-1 hover:border-sky-400 hover:bg-sky-400/10 hover:text-sky-200 hover:shadow-lg hover:shadow-sky-500/20">
+            <BsGithub className="text-lg" />
+          </a>
+
         </div>
       </div>
     </div>
@@ -88,7 +93,7 @@ const Projects = () => {
     <div id="projects" className='flex min-h-screen w-full flex-col items-center justify-center gap-16 p-4 md:px-14 md:py-24:'>
 
       <ScrollReveal>
-      <h1 className='text-4xl font-light text-white md:text-6xl'>Mis Proyectos</h1>
+      <h1 className='text-4xl font-normal text-white md:text-6xl'>Mis Proyectos</h1>
       </ScrollReveal>
 
       <div className="flex w-full max-w-250 flex-col gap-16 text-white">

@@ -73,7 +73,7 @@ const Tech = () => {
       whileInView="visible"
       transition={{ duration: 0.5 }}
 
-      className="text-4xl font-light text-white md:text-6xl">
+      className="text-4xl font-normal text-white md:text-6xl">
         Tecnologías
       </motion.h1>
       

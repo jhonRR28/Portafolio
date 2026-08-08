@@ -19,7 +19,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="flex max-w-150 flex-col items-center justify-center gap-3 text-center"
         >
-          <h1 className="bg-linear-to-r from-sky-300 via-cyan-400 to-blue-500 bg-clip-text text-transparent text-5xl font-light  md:text-7xl">
+          <h1 className="bg-linear-to-r from-sky-300 via-cyan-400 to-blue-500 bg-clip-text text-transparent text-5xl font-semibold  md:text-7xl">
             Jhon Roque
           </h1>
           <h3 className="bg-linear-to-r from-sky-400 to-blue-500 bg-clip-text text-transparent text-lg md:text-3xl">
