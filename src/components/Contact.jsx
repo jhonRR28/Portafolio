@@ -9,7 +9,7 @@ const Contact = () => {
 
         {/* Título */}
         <div className="flex flex-col items-center gap-6 text-center">
-          <h1 className="bg-linear-to-r from-sky-300 via-cyan-400 to-blue-500 bg-clip-text text-4xl font-light text-transparent md:text-6xl">
+          <h1 className="bg-linear-to-r from-sky-300 via-cyan-400 to-blue-500 bg-clip-text text-4xl font-normal text-transparent md:text-6xl">
             Ponte en contacto
           </h1>
 

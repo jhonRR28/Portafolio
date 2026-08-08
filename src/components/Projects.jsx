@@ -48,42 +48,55 @@ const projectsData = [
 const ScrollReveal = ({ children }) => {
   return (
     <motion.div
-    initial={{ opacity: 0, y: 100 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    transition={{ duration: 0.8}}
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
     >
       {children}
     </motion.div>
   )
 }
-const ProjectCard = ({project}) => {
+const ProjectCard = ({ project }) => {
   return (
     <ScrollReveal>
-    <div className='flex flex-col items-center gap-8 md:flex-row md:gap-24'>
-      <img src={project.image} alt="" className='w-full cursor-pointer rounded-2xl transition-all duration-300 hover:scale-105 md:w-75'/>
+      <div className='flex flex-col items-center gap-8 md:flex-row md:gap-24'>
+        <img src={project.image} alt="" className='w-full cursor-pointer rounded-2xl transition-all duration-300 hover:scale-105 md:w-75' />
 
-      <div className='flex flex-col gap-5'>
-        <div className='flex flex-col gap-3'>
-          <div className='text-xl font-semibold'>{project.title}</div>
-          <p className='text-gray-400'>{project.description}</p>
-        </div>
-
-        <div className="flex flex-wrap items-end justify-between gap-4">
-          <div className="flex flex-wrap gap-3">
-            {project.technologies.map((tech, index) => (
-              <span key={index} className="rounded-lg border border-sky-400/20 bg-sky-400/5 px-3 py-1.5 text-sm text-sky-300 transition-all duration-300 hover:border-sky-400/50 hover:bg-sky-400/10">
-                {tech}
-              </span>
-            ))}
+        <div className='flex flex-col gap-5'>
+          <div className='flex flex-col gap-3'>
+            <div className='text-xl font-semibold'>{project.title}</div>
+            <p className='text-gray-400'>{project.description}</p>
           </div>
-          <a href={project.repository} target="_blank" rel="noopener noreferrer" className="flex shrink-0 items-center gap-2 rounded-lg border border-sky-400/30 px-4 py-2 text-sm font-medium text-sky-300 transition-all duration-300 hover:-translate-y-1 hover:border-sky-400 hover:bg-sky-400/10 hover:text-sky-200 hover:shadow-lg hover:shadow-sky-500/20">
-            <BsGithub className="text-lg" />
-          </a>
 
+          <div className="grid grid-cols-[1fr_auto] items-start gap-4">
+
+            {/* Tecnologías */}
+            <div className="flex flex-wrap gap-3">
+              {project.technologies.map((tech, index) => (
+                <span
+                  key={index}
+                  className="rounded-lg border border-sky-500/30 bg-sky-400/5 p-1.5 text-sm text-sky-300 transition-all duration-300 hover:border-sky-400/50 hover:bg-sky-400/10"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+
+            {/* GitHub */}
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex shrink-0 items-center justify-center rounded-lg border border-sky-500/30 bg-sky-400/5 p-1.5 text-xl text-white transition-all duration-300 hover:border-sky-400 hover:bg-sky-400/10 hover:text-white hover:shadow-lg hover:shadow-sky-500/20"
+              aria-label={`Ver código de ${project.title}`}
+            >
+              <BsGithub />
+            </a>
+
+          </div>
         </div>
       </div>
-    </div>
     </ScrollReveal>
   )
 }
@@ -93,7 +106,7 @@ const Projects = () => {
     <div id="projects" className='flex min-h-screen w-full flex-col items-center justify-center gap-16 p-4 md:px-14 md:py-24:'>
 
       <ScrollReveal>
-      <h1 className='text-4xl font-normal text-white md:text-6xl'>Mis Proyectos</h1>
+        <h1 className='text-4xl font-normal text-white md:text-6xl'>Mis Proyectos</h1>
       </ScrollReveal>
 
       <div className="flex w-full max-w-250 flex-col gap-16 text-white">
